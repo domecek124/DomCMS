@@ -42,24 +42,15 @@
                     </div>
                 </div>
 
-                <!-- Recent Activity Card -->
                 <div class="card">
                     <div class="card-header border-0">
                         <h3 class="card-title">Recent Activity</h3>
                     </div>
                     <div class="card-body p-0">
                         <ul class="products-list product-list-in-card pl-2 pr-2">
-                            <!-- Add your recent activity items here -->
-                            <li class="item">
-                                <div class="product-info">
-                                    <a href="javascript:void(0)" class="product-title">John Doe
-                                        <span class="badge badge-warning float-right">5 hours ago</span></a>
-                                    <span class="product-description">
-                                    Published a new post "Lorem ipsum dolor sit amet."
-                                </span>
-                                </div>
-                            </li>
-                            <!-- More items... -->
+                            @foreach($latestActivity as $activity)
+                                <x-latest-activity-component :activity="$activity"></x-latest-activity-component>
+                            @endforeach
                         </ul>
                     </div>
                     <div class="card-footer text-center">
