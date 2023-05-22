@@ -80,6 +80,8 @@
                         </form>
                     </div>
                 </div>
+
+                <!-- Site Health Card -->
                 <div class="card">
                     <div class="card-header border-0">
                         <h3 class="card-title">Site Health</h3>
