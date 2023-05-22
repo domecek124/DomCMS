@@ -16,7 +16,7 @@
                                     <span class="info-box-icon bg-info"><i class="fas fa-thumbtack"></i></span>
                                     <div class="info-box-content">
                                         <span class="info-box-text">Posts</span>
-                                        <span class="info-box-number">12</span>
+                                        <span class="info-box-number">{{ $count['posts'] }}</span>
                                     </div>
                                 </div>
                             </div>
@@ -25,7 +25,7 @@
                                     <span class="info-box-icon bg-warning"><i class="fas fa-file-alt"></i></span>
                                     <div class="info-box-content">
                                         <span class="info-box-text">Pages</span>
-                                        <span class="info-box-number">6</span>
+                                        <span class="info-box-number">{{ $count['pages'] }}</span>
                                     </div>
                                 </div>
                             </div>
