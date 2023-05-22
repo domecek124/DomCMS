@@ -18,7 +18,6 @@ Route::middleware(['auth'])->group(function () {
     Route::put('posts/{post}/update', [PostController::class, 'update'])->name('posts.update');
     Route::get('pages/{page}/edit', [PageController::class, 'edit'])->name('pages.edit');
     Route::put('pages/{page}', [PageController::class, 'update'])->name('pages.update');
-    Route::get('/site-health', [SiteHealthController::class, 'getSiteHealth']);
 /*  Route::get('appearance', [AppearanceController::class, 'index'])->name('appearance.index');
     Route::post('appearance', [AppearanceController::class, 'store'])->name('appearance.store');*/
 });
