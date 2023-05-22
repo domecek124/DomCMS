@@ -55,7 +55,7 @@ class PostController extends Controller
     {
         $post = Post::where('slug', $slug)->firstOrFail();
 
-        return view('single_post', compact('post'));
+        return view('posts.show', compact('post'));
     }
 
     public function edit(Post $post)
