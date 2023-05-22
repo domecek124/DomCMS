@@ -15,7 +15,7 @@
     <td>{{ $post->created_at->format('M d, Y') }}</td>
     <td>
         <a href="{{ route('posts.show', $post->slug) }}" class="btn btn-sm btn-success">View</a>
-        <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-sm btn-warning">Edit</a>
+        <a href="{{ route('posts.edit', $post->slug) }}" class="btn btn-sm btn-warning">Edit</a>
         <form action="{{ route('posts.destroy', $post->id) }}" method="POST" style="display:inline">
             @csrf
             @method('DELETE')

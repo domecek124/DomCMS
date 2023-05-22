@@ -54,17 +54,17 @@ class PostController extends Controller
     public function show($slug)
     {
         $post = Post::where('slug', $slug)->firstOrFail();
-
         return view('posts.show', compact('post'));
     }
 
-    public function edit(Post $post)
+    public function edit($slug)
     {
+        $post = Post::where('slug', $slug)->firstOrFail();
         $users = User::all();
         $categories = Category::all();
         $tags = Tag::all();
 
-        return view('posts.edit', compact('post', 'users', 'categories', 'tags'));
+        return view('posts.edit', compact('post','users', 'categories', 'tags'));
     }
 
     public function update(Request $request, Post $post)
